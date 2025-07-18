@@ -47,6 +47,8 @@ import gdCertFull from '@/assets/images/gd.png'; // sertifikat gd
 import lgCertFull from '@/assets/images/lg.png'; // sertifikat lg
 import cyCertFull from '@/assets/images/cy.png'; // sertifikat cy
 import rCertFull from '@/assets/images/r.png'; // sertifikat r
+import sCertFull from '@/assets/images/s.png'; // sertifikat iot
+import hCertFull from '@/assets/images/h.png'; // sertifikat iot raspberry
 
 export default {
     data() {
@@ -167,6 +169,30 @@ export default {
                     title: 'R Fundamental for Data Science ',
                     date: 'July 30, 2024',
                     image: rCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 13,
+                    slug: 's-certificate',
+                    title: 'Internet of Things (IoT) - Software and Platforms',
+                    date: 'July 18, 2024',
+                    content: `
+                        <p>This certificate validates my proficiency in developing simple APIs with Flask, testing APIs using Postman and Request Library, and understanding the differences between SQL and NoSQL databases</p>
+                        <p>I am skilled in querying data and utilizing MongoDB Atlas, as well as working with Node-RED—including its integration with Raspberry Pi. Additionally, I can transmit MQTT data, display it on Node-RED dashboards, and create data visualizations using UBIDOTS integrated with Python.</p>
+                    `,
+                    image: sCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 14,
+                    slug: 'h-certificate',
+                    title: 'Internet of Things (IoT) Project - Building Health Monitoring System',
+                    date: 'July 18, 2024',
+                    content: `
+                        <p>This certification demonstrates my ability to design a simple health monitoring prototype using two sensors: a heart rate sensor and a blood oxygen (SpO2) sensor, as well as a body temperature sensor.</p>
+                        <p>I am proficient in integrating sensor data with the Ubidots IoT Platform and presenting it through an interactive dashboard for real-time monitoring.</p>
+                    `,
+                    image: hCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

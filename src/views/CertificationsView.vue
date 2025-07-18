@@ -74,12 +74,30 @@ import gdCertThumbnail from '@/assets/images/gd.png'; //
 import lgCertThumbnail from '@/assets/images/lg.png'; // 
 import cyCertThumbnail from '@/assets/images/cy.png'; // 
 import rCertThumbnail from '@/assets/images/r.png'; // 
+import sCertThumbnail from '@/assets/images/s.png'; // 
+import hCertThumbnail from '@/assets/images/h.png'; // 
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 14,
+          slug: 'h-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Internet of Things (IoT) Project - Building Health Monitoring System',
+          desc: 'Certificate of completion for successfully completing Internet of Things (IoT) Project - Building Health Monitoring System', // Deskripsi singkat
+          date: 'July 18, 2025',
+          thumbnail: hCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+        {
+          id: 13,
+          slug: 's-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Internet of Things (IoT) - Software and Platforms',
+          desc: 'Certificate of completion for successfully completing Internet of Things(IoT) - Software and Platforms', // Deskripsi singkat
+          date: 'July 18, 2025',
+          thumbnail: sCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 1,
           slug: 'iot-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
@@ -98,28 +116,12 @@ export default {
           thumbnail: iotesp32CertThumbnail
         },
         {
-          id: 3,
-          slug: 'html-certificate',
-          title: 'HTML Dasar',
-          desc: 'Certificate of Completion for successfully completing HTML Dasar',
-          date: 'November 02, 2024',
-          thumbnail: htmlCertThumbnail
-        },
-        {
           id: 4,
           slug: 'cyber-certificate',
           title: 'Introduction Cybersecurity',
           desc: 'Certificate of course Completion has successfully achieved student level credential for completing the Introduction to Cybersecurity course',
           date: 'May 29, 2025',
           thumbnail: cyberCertThumbnail
-        },
-        {
-          id: 5,
-          slug: 'python-certificate',
-          title: 'Python Fundamental for Data Science ',
-          desc: 'Certificate of Completion Python Fundamental for Data Science',
-          date: 'July 31, 2024',
-          thumbnail: pythonCertThumbnail
         },
         {
           id: 6,
@@ -130,36 +132,12 @@ export default {
           thumbnail: uiCertThumbnail
         },
         {
-          id: 7,
-          slug: 'sql-certificate',
-          title: 'Fundamental SQL Using SELECT Statement',
-          desc: 'Certificate of completion Fundamental SQL Using SELECT Statement',
-          date: 'August 01, 2024',
-          thumbnail: sqlCertThumbnail
-        },
-        {
-          id: 8,
-          slug: 'wr-certificate',
-          title: 'Wordpress Introduction',
-          desc: 'Certificate of completion short class Software Engineering by MySkill',
-          date: 'May 23, 2025',
-          thumbnail: wrCertThumbnail
-        },
-        {
           id: 9,
           slug: 'gd-certificate',
           title: 'Graphic Design Fundamental',
           desc: 'Have completed the Graphic Design Training held by Ousean Indonesia & GDF Camp on date 17 - 27 February 2025',
           date: 'February 28, 2025',
           thumbnail: gdCertThumbnail
-        },
-        {
-          id: 10,
-          slug: 'lg-certificate',
-          title: 'Logo Design',
-          desc: 'Completing short class Graphic Design by MySkill',
-          date: 'May 22, 2025',
-          thumbnail: lgCertThumbnail
         },
         {
           id: 11,
@@ -170,6 +148,46 @@ export default {
           thumbnail: cyCertThumbnail
         },
         {
+          id: 8,
+          slug: 'wr-certificate',
+          title: 'Wordpress Introduction',
+          desc: 'Certificate of completion short class Software Engineering by MySkill',
+          date: 'May 23, 2025',
+          thumbnail: wrCertThumbnail
+        },     
+        {
+          id: 10,
+          slug: 'lg-certificate',
+          title: 'Logo Design',
+          desc: 'Completing short class Graphic Design by MySkill',
+          date: 'May 22, 2025',
+          thumbnail: lgCertThumbnail
+        },
+        {
+          id: 3,
+          slug: 'html-certificate',
+          title: 'HTML Dasar',
+          desc: 'Certificate of Completion for successfully completing HTML Dasar',
+          date: 'November 02, 2024',
+          thumbnail: htmlCertThumbnail
+        },        
+        {
+          id: 5,
+          slug: 'python-certificate',
+          title: 'Python Fundamental for Data Science ',
+          desc: 'Certificate of Completion Python Fundamental for Data Science',
+          date: 'July 31, 2024',
+          thumbnail: pythonCertThumbnail
+        },     
+        {
+          id: 7,
+          slug: 'sql-certificate',
+          title: 'Fundamental SQL Using SELECT Statement',
+          desc: 'Certificate of completion Fundamental SQL Using SELECT Statement',
+          date: 'August 01, 2024',
+          thumbnail: sqlCertThumbnail
+        },    
+        {
           id: 12,
           slug: 'r-certificate',
           title: 'R Fundamental for Data Science',
@@ -177,6 +195,7 @@ export default {
           date: 'July 30, 2024',
           thumbnail: rCertThumbnail
         },
+        
       ]
     }
   },
