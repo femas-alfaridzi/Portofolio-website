@@ -76,12 +76,21 @@ import cyCertThumbnail from '@/assets/images/cy.png'; //
 import rCertThumbnail from '@/assets/images/r.png'; // 
 import sCertThumbnail from '@/assets/images/s.png'; // 
 import hCertThumbnail from '@/assets/images/h.png'; // 
+import jsCertThumbnail from '@/assets/images/js.png'; // 
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 15,
+          slug: 'js-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Fundamentals of JavaScript Programming',
+          desc: 'Completed JavaScript course covering DOM manipulation, functions, arrays, objects, control structures, and ES6 to build interactive web applications.', // Deskripsi singkat
+          date: 'July 21, 2025',
+          thumbnail: jsCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 14,
           slug: 'h-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
@@ -107,15 +116,7 @@ export default {
           thumbnail: iotCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
         },
         // Tambahkan data sertifikat lain di sini untuk daftar
-        {
-          id: 2,
-          slug: 'Iotesp32-certificate',
-          title: 'IoT Development with ESP32',
-          desc: 'Certificate of Completion for successfully completing IoT Development with ESP32',
-          date: 'May 17, 2025',
-          thumbnail: iotesp32CertThumbnail
-        },
-        {
+         {
           id: 4,
           slug: 'cyber-certificate',
           title: 'Introduction Cybersecurity',
@@ -123,6 +124,14 @@ export default {
           date: 'May 29, 2025',
           thumbnail: cyberCertThumbnail
         },
+        {
+          id: 2,
+          slug: 'Iotesp32-certificate',
+          title: 'IoT Development with ESP32',
+          desc: 'Certificate of Completion for successfully completing IoT Development with ESP32',
+          date: 'May 17, 2025',
+          thumbnail: iotesp32CertThumbnail
+        },       
         {
           id: 6,
           slug: 'ui-certificate',
@@ -170,15 +179,7 @@ export default {
           desc: 'Certificate of Completion for successfully completing HTML Dasar',
           date: 'November 02, 2024',
           thumbnail: htmlCertThumbnail
-        },        
-        {
-          id: 5,
-          slug: 'python-certificate',
-          title: 'Python Fundamental for Data Science ',
-          desc: 'Certificate of Completion Python Fundamental for Data Science',
-          date: 'July 31, 2024',
-          thumbnail: pythonCertThumbnail
-        },     
+        },
         {
           id: 7,
           slug: 'sql-certificate',
@@ -186,7 +187,15 @@ export default {
           desc: 'Certificate of completion Fundamental SQL Using SELECT Statement',
           date: 'August 01, 2024',
           thumbnail: sqlCertThumbnail
-        },    
+        },            
+        {
+          id: 5,
+          slug: 'python-certificate',
+          title: 'Python Fundamental for Data Science ',
+          desc: 'Certificate of Completion Python Fundamental for Data Science',
+          date: 'July 31, 2024',
+          thumbnail: pythonCertThumbnail
+        },         
         {
           id: 12,
           slug: 'r-certificate',

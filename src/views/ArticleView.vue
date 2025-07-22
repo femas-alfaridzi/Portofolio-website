@@ -49,6 +49,7 @@ import cyCertFull from '@/assets/images/cy.png'; // sertifikat cy
 import rCertFull from '@/assets/images/r.png'; // sertifikat r
 import sCertFull from '@/assets/images/s.png'; // sertifikat iot
 import hCertFull from '@/assets/images/h.png'; // sertifikat iot raspberry
+import jsCertFull from '@/assets/images/js.png'; // sertifikat js
 
 export default {
     data() {
@@ -193,6 +194,18 @@ export default {
                         <p>I am proficient in integrating sensor data with the Ubidots IoT Platform and presenting it through an interactive dashboard for real-time monitoring.</p>
                     `,
                     image: hCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 15,
+                    slug: 'js-certificate',
+                    title: 'Fundamentals of JavaScript Programming',
+                    date: 'July 21, 2024',
+                    content: `
+                        <p>Completed JavaScript course covering DOM manipulation, functions, arrays, objects,</p>
+                        <p>control structures, and ES6 to build interactive web applications.</p>
+                    `,
+                    image: jsCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]
