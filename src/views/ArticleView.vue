@@ -50,6 +50,7 @@ import rCertFull from '@/assets/images/r.png'; // sertifikat r
 import sCertFull from '@/assets/images/s.png'; // sertifikat iot
 import hCertFull from '@/assets/images/h.png'; // sertifikat iot raspberry
 import jsCertFull from '@/assets/images/js.png'; // sertifikat js
+import rvCertFull from '@/assets/images/rv.png'; // sertifikat rv
 
 export default {
     data() {
@@ -206,6 +207,18 @@ export default {
                         <p>control structures, and ES6 to build interactive web applications.</p>
                     `,
                     image: jsCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 16,
+                    slug: 'rv-certificate',
+                    title: 'Software Engineering Coding Camp',
+                    date: 'July 18, 2025',
+                    content: `
+                        <p>Certified in RevoU Software Engineering Coding Camp (1 week) —</p>
+                        <p>focused on JavaScript fundamentals and interactive web development.</p>
+                    `,
+                    image: rvCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

@@ -77,6 +77,8 @@ import rCertThumbnail from '@/assets/images/r.png'; //
 import sCertThumbnail from '@/assets/images/s.png'; // 
 import hCertThumbnail from '@/assets/images/h.png'; // 
 import jsCertThumbnail from '@/assets/images/js.png'; // 
+import rvCertThumbnail from '@/assets/images/rv.png'; // 
+
 
 export default {
   data() {
@@ -106,6 +108,14 @@ export default {
           desc: 'Certificate of completion for successfully completing Internet of Things(IoT) - Software and Platforms', // Deskripsi singkat
           date: 'July 18, 2025',
           thumbnail: sCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+        {
+          id: 16,
+          slug: 'rv-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'ISoftware Engineering Coding Camp',
+          desc: 'Certified in RevoU Software Engineering Coding Camp (1 week) — focused on JavaScript fundamentals and interactive web development.', // Deskripsi singkat
+          date: 'July 18, 2025',
+          thumbnail: rvCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
         },
         {
           id: 1,
