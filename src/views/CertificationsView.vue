@@ -78,13 +78,21 @@ import sCertThumbnail from '@/assets/images/s.png'; //
 import hCertThumbnail from '@/assets/images/h.png'; // 
 import jsCertThumbnail from '@/assets/images/js.png'; // 
 import rvCertThumbnail from '@/assets/images/rv.png'; // 
-
+import ciCertThumbnail from '@/assets/images/iotcisco.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 17,
+          slug: 'ci-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Introduction to IoT and Digital Transformation',
+          desc: 'Completed Introduction to IoT and Digital Transformation from Cisco Networking Academy', // Deskripsi singkat
+          date: 'August 26, 2025',
+          thumbnail: ciCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 15,
           slug: 'js-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
