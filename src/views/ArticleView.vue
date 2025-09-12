@@ -52,6 +52,9 @@ import hCertFull from '@/assets/images/h.png'; // sertifikat iot raspberry
 import jsCertFull from '@/assets/images/js.png'; // sertifikat js
 import rvCertFull from '@/assets/images/rv.png'; // sertifikat rv
 import ciCertFull from '@/assets/images/iotcisco.png'; // sertifikat rv
+import sqCertFull from '@/assets/images/sql2.png'; // sertifikat sql2
+import agCertFull from '@/assets/images/ag.png'; // sertifikat ag
+import dtCertFull from '@/assets/images/dt.png'; // sertifikat dt
 
 export default {
     data() {
@@ -250,6 +253,42 @@ export default {
                         </p>
                         `,
                     image: ciCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 18,
+                    slug: 'sq-certificate',
+                    title: 'Introduction to SQL',
+                    date: '8 September, 2025',
+                    content: `
+                        <p>•	Gained foundational knowledge of SQL, including querying, filtering, and managing relational database.</p>
+                        
+                    `,
+                    image: sqCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 19,
+                    slug: 'ag-certificate',
+                    title: 'Agile and Lean Development Culture',
+                    date: '25 July, 2025',
+                    content: `
+                        <p>• Acquired knowledge of Agile principles and Lean practices to improve efficiency, collaboration, and product delivery in software development.</p>
+                        
+                    `,
+                    image: agCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 20,
+                    slug: 'dt-certificate',
+                    title: 'Data Structure and Algorithms in Python and Java',
+                    date: '29 July, 2025',
+                    content: `
+                        <p>• Gained practical experience in solving computational problems using both Python and Java.</p>
+                        
+                    `,
+                    image: dtCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

@@ -79,12 +79,24 @@ import hCertThumbnail from '@/assets/images/h.png'; //
 import jsCertThumbnail from '@/assets/images/js.png'; // 
 import rvCertThumbnail from '@/assets/images/rv.png'; // 
 import ciCertThumbnail from '@/assets/images/iotcisco.png';
+import sqCertThumbnail from '@/assets/images/sql2.png';
+import agCertThumbnail from '@/assets/images/ag.png';
+import dtCertThumbnail from '@/assets/images/dt.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        
+        {
+          id: 18,
+          slug: 'sq-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Introduction to SQL',
+          desc: 'Completed Introduction to SQL from Simplilearn', // Deskripsi singkat
+          date: 'September 8, 2025',
+          thumbnail: sqCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 17,
           slug: 'ci-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
@@ -92,6 +104,22 @@ export default {
           desc: 'Completed Introduction to IoT and Digital Transformation from Cisco Networking Academy', // Deskripsi singkat
           date: 'August 26, 2025',
           thumbnail: ciCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+        {
+          id: 20,
+          slug: 'dt-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Data Structure and Algorithms in Python and Java',
+          desc: 'Completed Structure and Algorithms in Python and Java from Dkatalis', // Deskripsi singkat
+          date: 'July 29, 2025',
+          thumbnail: dtCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+        {
+          id: 19,
+          slug: 'ag-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Agile and Lean Development Culture',
+          desc: 'Completed Agile and Lean Development Culture from PT Bank Jago Tbk', // Deskripsi singkat
+          date: 'July 25, 2025',
+          thumbnail: agCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
         },
         {
           id: 15,
@@ -120,7 +148,7 @@ export default {
         {
           id: 16,
           slug: 'rv-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
-          title: 'ISoftware Engineering Coding Camp',
+          title: 'Software Engineering Coding Camp',
           desc: 'Certified in RevoU Software Engineering Coding Camp (1 week) — focused on JavaScript fundamentals and interactive web development.', // Deskripsi singkat
           date: 'July 18, 2025',
           thumbnail: rvCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
