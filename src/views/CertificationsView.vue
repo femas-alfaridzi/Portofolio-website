@@ -82,13 +82,21 @@ import ciCertThumbnail from '@/assets/images/iotcisco.png';
 import sqCertThumbnail from '@/assets/images/sql2.png';
 import agCertThumbnail from '@/assets/images/ag.png';
 import dtCertThumbnail from '@/assets/images/dt.png';
+import aiCertThumbnail from '@/assets/images/ai.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
-        
+        {
+          id: 21,
+          slug: 'ai-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Microsoft Azure AI Fundamentals (AI-900)',
+          desc: 'Completed Microsoft Azure AI Fundamentals (AI-900) from Microsoft', // Deskripsi singkat
+          date: 'September 26, 2025',
+          thumbnail: aiCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 18,
           slug: 'sq-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue

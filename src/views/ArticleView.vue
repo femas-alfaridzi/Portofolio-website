@@ -55,6 +55,7 @@ import ciCertFull from '@/assets/images/iotcisco.png'; // sertifikat rv
 import sqCertFull from '@/assets/images/sql2.png'; // sertifikat sql2
 import agCertFull from '@/assets/images/ag.png'; // sertifikat ag
 import dtCertFull from '@/assets/images/dt.png'; // sertifikat dt
+import aiCertFull from '@/assets/images/ai.png'; // sertifikat dt
 
 export default {
     data() {
@@ -285,10 +286,22 @@ export default {
                     title: 'Data Structure and Algorithms in Python and Java',
                     date: '29 July, 2025',
                     content: `
-                        <p>• Gained practical experience in solving computational problems using both Python and Java.</p>
+                        <p> Gained practical experience in solving computational problems using both Python and Java.</p>
                         
                     `,
                     image: dtCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 21,
+                    slug: 'ai-certificate',
+                    title: 'Microsoft Azure AI Fundamentals (AI-900)',
+                    date: '26 September, 2025',
+                    content: `
+                        <p>Gained foundational knowledge of Artificial Intelligence (AI) concepts and Microsoft Azure AI services, including Machine Learning, Computer Vision, Natural Language Processing (NLP), Speech, and Responsible AI practices. Covered practical scenarios such as image analysis, object detection, text recognition, face detection, translation, conversational AI, and building intelligent bots.</p>
+                        
+                    `,
+                    image: aiCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]
