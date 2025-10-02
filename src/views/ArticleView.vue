@@ -55,7 +55,8 @@ import ciCertFull from '@/assets/images/iotcisco.png'; // sertifikat rv
 import sqCertFull from '@/assets/images/sql2.png'; // sertifikat sql2
 import agCertFull from '@/assets/images/ag.png'; // sertifikat ag
 import dtCertFull from '@/assets/images/dt.png'; // sertifikat dt
-import aiCertFull from '@/assets/images/ai.png'; // sertifikat dt
+import aiCertFull from '@/assets/images/ai.png'; // sertifikat ai
+import nextCertFull from '@/assets/images/next.png'; // sertifikat next
 
 export default {
     data() {
@@ -302,6 +303,18 @@ export default {
                         
                     `,
                     image: aiCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 22,
+                    slug: 'next-certificate',
+                    title: 'Next.js App Router Fundamentals',
+                    date: '2 October, 2025',
+                    content: `
+                        <p>Successfully completed the Next.js App Router Fundamentals course by Vercel, covering the core concepts of routing, layouts, data fetching, and server components in modern Next.js applications.</p>
+                        
+                    `,
+                    image: nextCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

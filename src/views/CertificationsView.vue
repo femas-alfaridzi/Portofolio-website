@@ -83,12 +83,21 @@ import sqCertThumbnail from '@/assets/images/sql2.png';
 import agCertThumbnail from '@/assets/images/ag.png';
 import dtCertThumbnail from '@/assets/images/dt.png';
 import aiCertThumbnail from '@/assets/images/ai.png';
+import nextCertThumbnail from '@/assets/images/next.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 22,
+          slug: 'next-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Next.js App Router Fundamentals',
+          desc: 'Completed Next.js App Router Fundamentals from Vercel', // Deskripsi singkat
+          date: 'October 2, 2025',
+          thumbnail: nextCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 21,
           slug: 'ai-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
