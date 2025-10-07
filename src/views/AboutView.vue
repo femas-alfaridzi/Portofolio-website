@@ -1,24 +1,24 @@
 <script>
-import profilePicture from "@/assets/profile-picture.jpg"; // <-- import untuk gambar picture profile
-import CppIcon from "@/assets/c-.png"; // <-- import untuk icon c++
-import PythonIcon from "@/assets/python.png"; // <-- import untuk icon python
-import JavaIcon from "@/assets/java.png"; // <-- import untuk icon java
-import VueIcon from "@/assets/vue.png"; // <-- import untuk icon vue
-import FigmaIcon from "@/assets/figma.png"; // <-- import untuk icon figma
-import ArduinoIcon from "@/assets/arduino.png"; // <-- import untuk icon arduino
-import VScodeIcon from "@/assets/vscode.png"; // <-- import untuk icon vscode
-import PlatoformIOIcon from "@/assets/platformio.png"; // <-- import untuk icon platformio
-import AndroidIcon from "@/assets/android.png"; // <-- import untuk icon android
-import FlutterIcon from "@/assets/flutter.png"; // <-- import untuk icon flutter
-import MswordIcon from "@/assets/msword.png"; // <-- import untuk icon msword
-import CanvaIcon from "@/assets/canva.png"; // <-- import untuk icon canva
-import BootstrapsIcon from "@/assets/bootstraps.png"; // <-- import untuk icon bootstraps
+import profilePicture from "@/assets/araya.jpg";
+import CppIcon from "@/assets/c-.png";
+import PythonIcon from "@/assets/python.png";
+import JavaIcon from "@/assets/java.png";
+import VueIcon from "@/assets/vue.png";
+import FigmaIcon from "@/assets/figma.png";
+import ArduinoIcon from "@/assets/arduino.png";
+import VScodeIcon from "@/assets/vscode.png";
+import PlatoformIOIcon from "@/assets/platformio.png";
+import AndroidIcon from "@/assets/android.png";
+import FlutterIcon from "@/assets/flutter.png";
+import MswordIcon from "@/assets/msword.png";
+import CanvaIcon from "@/assets/canva.png";
+import BootstrapsIcon from "@/assets/bootstraps.png";
 
 export default {
   data() {
     return {
       activeTab: 1,
-      aboutImage: profilePicture, // <-- Tambahkan properti ini untuk gambar
+      aboutImage: profilePicture,
       tech: [
         {
           id: 1,
@@ -186,7 +186,7 @@ export default {
       >
         <div class="flex justify-center">
           <img
-            class="rounded-full mb-3 fadein-up object-cover object-center w-80 h-80"
+            class="rounded-full border-4 border-amber-200 pict mb-3 fadein-up object-cover object-center w-80 h-80"
             :src="aboutImage"
             alt="Foto"
           />
@@ -340,6 +340,13 @@ export default {
 </template>
 
 <style>
+/* Style untuk gambar profile - sama seperti di Home */
+.pict {
+  box-shadow: 0px 0px 73px -9px rgba(255, 254, 205, 0.765);
+  -webkit-box-shadow: 0px 0px 73px -9px rgba(237, 203, 66, 0.889);
+  -moz-box-shadow: 0px 0px 73px -9px rgb(250, 255, 186);
+}
+
 .fadein-left {
   opacity: 0;
   animation: fadeInLeft 0.5s ease-out forwards;

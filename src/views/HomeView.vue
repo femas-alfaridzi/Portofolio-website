@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import profilePicture from '@/assets/profile-picture.jpg'
+import profilePicture from '@/assets/araya.jpg'
 
 export default {
   name: 'HomeView',
