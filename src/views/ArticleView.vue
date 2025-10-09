@@ -57,6 +57,7 @@ import agCertFull from '@/assets/images/ag.png'; // sertifikat ag
 import dtCertFull from '@/assets/images/dt.png'; // sertifikat dt
 import aiCertFull from '@/assets/images/ai.png'; // sertifikat ai
 import nextCertFull from '@/assets/images/next.png'; // sertifikat next
+import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
 
 export default {
     data() {
@@ -315,6 +316,17 @@ export default {
                         
                     `,
                     image: nextCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 23,
+                    slug: 'dc-certificate',
+                    title: 'Learn AI Basics',
+                    date: '10 October, 2025',
+                    content: `
+                        <p>Successfully completed the Learn AI Basics course by Dicoding, covering the core concepts of AI, machine learning, Deep Learning, and their applications.</p>
+                    `,
+                    image: dcCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

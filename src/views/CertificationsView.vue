@@ -84,12 +84,21 @@ import agCertThumbnail from '@/assets/images/ag.png';
 import dtCertThumbnail from '@/assets/images/dt.png';
 import aiCertThumbnail from '@/assets/images/ai.png';
 import nextCertThumbnail from '@/assets/images/next.png';
+import dcCertThumbnail from '@/assets/images/dc.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 23,
+          slug: 'dc-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Learn AI Basics',
+          desc: 'Completed Learn AI Basics from Dicoding', // Deskripsi singkat
+          date: 'October 2, 2025',
+          thumbnail: dcCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 22,
           slug: 'next-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
