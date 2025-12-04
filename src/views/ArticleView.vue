@@ -58,6 +58,7 @@ import dtCertFull from '@/assets/images/dt.png'; // sertifikat dt
 import aiCertFull from '@/assets/images/ai.png'; // sertifikat ai
 import nextCertFull from '@/assets/images/next.png'; // sertifikat next
 import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
+import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
 
 export default {
     data() {
@@ -327,6 +328,17 @@ export default {
                         <p>Successfully completed the Learn AI Basics course by Dicoding, covering the core concepts of AI, machine learning, Deep Learning, and their applications.</p>
                     `,
                     image: dcCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null
+                },
+                {
+                    id: 24,
+                    slug: 'ict-certificate',
+                    title: 'Microsoft Office Dekstop Application',
+                    date: '2 December, 2025',
+                    content: `
+                        <p>Successfully completed the Microsoft Office Dekstop Application course by Trust Training Partners, covering the core concepts of Microsoft Office applications including Word, Excel, and PowerPoint.</p>
+                    `,
+                    image: ictCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
             ]

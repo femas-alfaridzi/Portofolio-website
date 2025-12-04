@@ -88,6 +88,13 @@ export default {
           imageUrl: BootstrapsIcon,
           status: "Junior",
         },
+        {
+          id: 12,
+          name: "Next.js",
+          imageUrl: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+          status: "Junior",
+        },
+        
       ],
       tools: [
         {

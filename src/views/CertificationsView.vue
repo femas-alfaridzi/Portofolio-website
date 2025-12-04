@@ -85,12 +85,21 @@ import dtCertThumbnail from '@/assets/images/dt.png';
 import aiCertThumbnail from '@/assets/images/ai.png';
 import nextCertThumbnail from '@/assets/images/next.png';
 import dcCertThumbnail from '@/assets/images/dc.png';
+import ictCertThumbnail from '@/assets/images/ict.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 24,
+          slug: 'ict-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Microsoft Office Dekstop Application',
+          desc: 'Completed Microsoft Office Dekstop Application from Trust Training Partners', // Deskripsi singkat
+          date: 'December 2, 2025',
+          thumbnail: ictCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 23,
           slug: 'dc-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
