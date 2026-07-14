@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class', // switched to 'class' so theme toggle works
   theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),

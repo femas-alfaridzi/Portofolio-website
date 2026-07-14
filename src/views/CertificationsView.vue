@@ -2,9 +2,9 @@
   <div class="container mx-auto p-3 md:p-8">
     <div class="flex flex-col-reverse md:flex-row relative">
       <div class="w-full md:w-2/3">
-        <div class="flex flex-col gap-4 md:px-20 fade-zoom-up">
-          <article v-for="certification in certifications" :key="certification.id">
-            <router-link :to="`/read/${certification.slug}/${certification.id}`" class="flex w-full bg-[#1e1e1f] border-[#383838] rounded-xl text-left text-white p-5 md:py-7 md:px-8 cursor-pointer hover:bg-[#282828] items-center">
+            <div class="flex flex-col gap-4 md:px-20 fade-zoom-up">
+              <article v-for="certification in certifications" :key="certification.id">
+                <router-link :to="`/read/${certification.slug}/${certification.id}`" class="flex w-full bg-white dark:bg-[#1e1e1f] border border-gray-200 dark:border-[#383838] rounded-xl text-left text-gray-900 dark:text-white p-5 md:py-7 md:px-8 cursor-pointer hover:bg-gray-50 dark:hover:bg-[#282828] items-center shadow-sm">
               <div class="w-full pr-4">
                 <div class="text-xs mb-1 text-slate-400 flex items-center italic">
                   <div class="h-[1px] w-20 bg-amber-200 md:w-5 aos-init aos-animate mr-2"></div> {{ certification.date }}
@@ -21,33 +21,23 @@
           </article>
         </div>
       </div>
-      <div class="w-full md:w-1/3 h-fit p-8 md:sticky md:top-24">
+          <div class="w-full md:w-1/3 h-fit p-8 md:sticky md:top-24">
         <div class="flex flex-col text-left">
           <div class="bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300 text-transparent"> Experiences Organization</div>
           <div class="h-[1px] mt-7 mb-7 w-20 bg-amber-200 aos-init aos-animate mr-2"></div>
           <div class="hidden md:block">
-            <div class="text-white text-md font-semibold">Event Organization</div>
+            <div class="text-gray-900 dark:text-white text-md font-semibold">Event Organization</div>
             <div class="mt-3 flex flex-wrap gap-1">
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Brawijaya All Star 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Eksekutif Mahasiswa UB 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Brawijaya Entrepreneur Festival 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Kampung Budaya 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Staff Pengembangan UABB 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Brawnation 3x3 2024</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Essay Competition Participant</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Young Enterpreneur Summit Singapore and Malaysia</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Public Speaking Skills Workshop</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Leadership Program</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Brawijaya All Star 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Eksekutif Mahasiswa UB 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Brawijaya Entrepreneur Festival 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Kampung Budaya 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Staff Pengembangan UABB 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Brawnation 3x3 2024</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Essay Competition Participant</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Young Enterpreneur Summit Singapore and Malaysia</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Public Speaking Skills Workshop</span>
+              <span class="py-2 px-3 rounded-2xl bg-white dark:bg-[#1e1e1f] hover:bg-gray-100 dark:hover:bg-white/20 text-gray-900 dark:text-white text-xs cursor-pointer">Leadership Program</span>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 <template>
     <div class="w-full md:w-3/5 mx-auto md:mt-5">
-        <div class="bg-white rounded-xl mx-3 p-5 md:p-10 md:mx-0">
+        <div class="bg-white dark:bg-[#1e1e1f] rounded-xl mx-3 p-5 md:p-10 md:mx-0 text-gray-900 dark:text-white">
             <div>
                 <template v-if="selectedCertification">
-                    <h1 class="text-xl md:text-4xl text-black text-left font-bold leading-relaxed">{{ selectedCertification.title }}</h1>
-                    <div class="mt-3 text-left text-gray-800 text-sm">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
+                    <h1 class="text-xl md:text-4xl text-gray-900 dark:text-white text-left font-bold leading-relaxed">{{ selectedCertification.title }}</h1>
+                    <div class="mt-3 text-left text-gray-800 dark:text-amber-200 text-sm">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
                     <div class="h-[2px] w-20 my-5 md:my-10 bg-[#ffdb70] md:w-1/3 aos-init aos-animate mr-2"></div>
                     <div>
                         <div class="relative w-full image-container">
@@ -12,7 +12,7 @@
                                 :alt="selectedCertification.title + ' Certificate'">
                         </div>
                     </div>
-                    <div class="text-left text-black mt-8" v-html="selectedCertification.content">
+                    <div class="text-left text-gray-900 dark:text-white mt-8" v-html="selectedCertification.content">
                         </div>
 
                     <div v-if="selectedCertification.pdfUrl" class="mt-8 text-center">
