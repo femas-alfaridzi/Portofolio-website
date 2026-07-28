@@ -46,6 +46,15 @@
           tech: 'UI Design Fima',
           github: 'null',
           demo: 'null'
+        },
+        {
+          id: 6,
+          name: 'SIAP-PRO',
+          imageUrl: 'siappro',
+          status: 'SIAP-PRO (Sistem Informasi Acara dan Persidangan Protokol) is a web-based platform developed during my internship at the Ministry of State Secretariat of the Republic of Indonesia. The system digitalizes protocol officer assignments and council activity monitoring, replacing manual Google Spreadsheet workflows with a centralized platform featuring task management, activity tracking, reporting, and dashboard analytics.',
+          tech: 'Laravel, PHP, MySQL, Tailwind CSS, Chart.js',
+          github: 'null',
+          demo: 'null'
         }
       ]
     };
@@ -67,25 +76,24 @@
       <section>
         <div>
           <div class="grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in">
-            <div v-for="item in items" :key="item.id">
+            <div v-for="item in items" :key="item.id" class="h-full">
               <div
-                class="item-card flex flex-col items-center gap-2 rounded bg-white dark:bg-[#1e1e1f] hover:bg-gray-50 dark:hover:bg-[#282828] border border-gray-200 dark:border-[#383838] rounded-xl text-gray-900 dark:text-amber-50 md:gap-3 px-5 py-5 lg:px-5 shadow-sm">
-                <div class="flex h-12 w-12 items-center justify-center p-0 h-full w-full lg:p-0 zoom-in">
-                  <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl"
+                class="item-card h-full flex flex-col gap-2 rounded bg-white dark:bg-[#1e1e1f] hover:bg-gray-50 dark:hover:bg-[#282828] border border-gray-200 dark:border-[#383838] rounded-xl text-gray-900 dark:text-amber-50 md:gap-3 px-5 py-5 lg:px-5 shadow-sm">
+                <div class="zoom-in w-full">
+                  <img :alt="item.name" loading="lazy" decoding="async" class="drop-shadow-md rounded-lg w-full h-auto"
                     :src="'/img/' + item.imageUrl + '.png'"> <!--tempat mengubah gambar project-->
                 </div>
-                <div class="w-full flex flex-col gap-2 items-center text-sm md:text-base lg:text-lg">
-                  <div class="title-text font-medium text-secondary">{{ item.name }}
+                <div class="w-full flex flex-col flex-1 gap-2 text-sm md:text-base lg:text-lg">
+                  <div class="title-text font-medium text-secondary text-left mt-2">{{ item.name }}</div>
+                  <div class="w-full text-left text-[10px] text-gray-600 dark:text-[#c1c1c1] md:text-xs lg:text-sm flex-grow">
+                    {{ item.status }}
                   </div>
-                  <div class="w-full text-left text-[10px] text-gray-600 dark:text-[#c1c1c1] md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
-                  <div class="w-full mt-4 text-normal text-sm text-left text-amber-200">
+                  <div class="w-full mt-auto pt-2 text-normal text-sm text-left text-amber-200">
                     {{ item.tech }}
                   </div>
-               
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
