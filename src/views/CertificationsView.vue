@@ -12,9 +12,9 @@
                 <h1 class="text-sm md:text-md text-amber-200 font-bold mb-2 paraf">{{ certification.title }}</h1>
                 <div class="text-sm hidden md:block paraf">{{ certification.desc }}</div>
               </div>
-              <div>
-                <div class="w-20 h-20 md:w-28 flex items-center md:h-28">
-                  <img :src="certification.thumbnail" class="rounded-lg md:rounded-xl" :alt="certification.title">
+              <div class="flex-shrink-0">
+                <div class="w-20 h-20 md:w-28 md:h-28 overflow-hidden rounded-lg md:rounded-xl bg-gray-100 dark:bg-[#282828] flex items-center justify-center">
+                  <img :src="certification.thumbnail" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" :alt="certification.title">
                 </div>
               </div>
             </router-link>
@@ -76,12 +76,21 @@ import aiCertThumbnail from '@/assets/images/ai.png';
 import nextCertThumbnail from '@/assets/images/next.png';
 import dcCertThumbnail from '@/assets/images/dc.png';
 import ictCertThumbnail from '@/assets/images/ict.png';
+import bnspCertThumbnail from '@/assets/images/bnsp.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 25,
+          slug: 'bnsp-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+          desc: 'Completed BNSP Internet of Things (IoT) Engineer from Badan Nasional Sertifikasi Profesi (BNSP)', // Deskripsi singkat
+          date: '12 January, 2026',
+          thumbnail: bnspCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 24,
           slug: 'ict-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue

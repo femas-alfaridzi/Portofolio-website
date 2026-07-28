@@ -7,8 +7,8 @@
                     <div class="mt-3 text-left text-gray-800 dark:text-amber-200 text-sm">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
                     <div class="h-[2px] w-20 my-5 md:my-10 bg-[#ffdb70] md:w-1/3 aos-init aos-animate mr-2"></div>
                     <div>
-                        <div class="relative w-full image-container">
-                            <img :src="selectedCertification.image" class="rounded-lg w-full h-full object-contain"
+                        <div class="relative w-full image-container flex justify-center items-center">
+                            <img :src="selectedCertification.image" class="rounded-lg max-h-[65vh] w-auto object-contain shadow-xl hover:scale-[1.02] transition-transform duration-300"
                                 :alt="selectedCertification.title + ' Certificate'">
                         </div>
                     </div>
@@ -59,6 +59,7 @@ import aiCertFull from '@/assets/images/ai.png'; // sertifikat ai
 import nextCertFull from '@/assets/images/next.png'; // sertifikat next
 import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
 import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
+import bnspCertFull from '@/assets/images/bnsp.png'; // sertifikat bnsp
 
 export default {
     data() {
@@ -341,6 +342,17 @@ export default {
                     image: ictCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null
                 },
+                {
+                    id: 25,
+                    slug: 'bnsp-certificate',
+                    title: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+                    date: '12 January, 2026',
+                    content: `
+                        <p>Certified in IoT system development, sensor integration, embedded systems, and implementation of connected technology solutions.</p>
+                    `,
+                    image: bnspCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null // Sertifikat PDF
+                },
             ]
         }
     },
@@ -377,8 +389,8 @@ export default {
 
 .image-container {
     padding-top: 0 !important; /* Hapus padding-top default */
-    height: auto; /* Atau atur tinggi tetap seperti height: 500px; */
-    max-height: 80vh; /* Contoh: maksimal 80% dari tinggi viewport */
+    height: auto;
+    max-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,7 +399,7 @@ export default {
 .image-container img {
     position: static !important; /* Nonaktifkan absolute positioning */
     max-width: 100%;
-    max-height: 100%;
+    max-height: 65vh;
     object-fit: contain; /* Penting agar gambar tidak terpotong */
 }
 </style>

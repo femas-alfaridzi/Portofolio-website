@@ -1,33 +1,25 @@
-// Simple theme manager: uses localStorage and toggles the 'dark' class on <html>
+// Permanent Dark Mode enforcement for portfolio website
 export function getTheme() {
-  if (typeof window === 'undefined') return 'light';
-  const stored = localStorage.getItem('theme');
-  if (stored) return stored;
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  return prefersDark ? 'dark' : 'light';
+  return 'dark';
 }
 
-export function setTheme(theme) {
+export function setTheme() {
   if (typeof document === 'undefined') return;
   const html = document.documentElement;
-  if (theme === 'dark') html.classList.add('dark');
-  else html.classList.remove('dark');
+  html.classList.add('dark');
   try {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme', 'dark');
   } catch (e) {
     // ignore
   }
 }
 
 export function initTheme() {
-  const t = getTheme();
-  setTheme(t);
-  return t;
+  setTheme();
+  return 'dark';
 }
 
 export function toggleTheme() {
-  const current = getTheme();
-  const next = current === 'dark' ? 'light' : 'dark';
-  setTheme(next);
-  return next;
+  setTheme();
+  return 'dark';
 }
