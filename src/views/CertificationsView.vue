@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-3 md:p-8">
+  <div class="container mx-auto px-3 py-6 md:p-8">
     <div class="flex flex-col-reverse md:flex-row relative">
       <div class="w-full md:w-2/3">
             <div class="flex flex-col gap-4 md:px-20 fade-zoom-up">

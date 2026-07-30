@@ -172,7 +172,7 @@ export default {
 </script>
 <template>
   <div
-    class="bg-white dark:bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-10 text-left border border-gray-200 dark:border-[#383838] rounded-3xl text-gray-900 dark:text-amber-50 mx-3 mb-5">
+    class="bg-white dark:bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-10 text-left border border-gray-200 dark:border-[#383838] rounded-3xl text-gray-900 dark:text-amber-50 mx-3 mt-2 md:mt-0 mb-5">
     <article data-page="about">
       <header>
         <div

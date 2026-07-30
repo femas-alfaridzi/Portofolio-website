@@ -4,7 +4,7 @@
   <div class="max-w-7xl mx-auto flex flex-col relative">
 
     <nav class="w-full md:fixed top-0 left-0 right-0 z-[98] backdrop-blur-md bg-gray-50/80 dark:bg-[#121212]/80 border-b border-gray-200 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-5 flex flex-wrap items-center justify-between">
+      <div class="max-w-7xl mx-auto px-5 py-3 md:py-1 flex flex-wrap items-center justify-between">
         <button @click="redirectToHome" class="flex">
           <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Femas Alfaridzi</span>
         </button>
@@ -32,7 +32,7 @@
       </div>
     </nav>
 
-    <div class="md:mt-[100px]">
+    <div class="mt-6 md:mt-[115px] mb-24 md:mb-0">
       <router-view />
     </div>
   </div>

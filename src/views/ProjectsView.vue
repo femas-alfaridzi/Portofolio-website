@@ -5,6 +5,33 @@
       activeTab: 1,
       items: [
         {
+          id: 6,
+          name: 'SIAP-PRO',
+          imageUrl: 'siappro',
+          status: 'SIAP-PRO (Sistem Informasi Acara dan Persidangan Protokol) is a web-based platform developed during my internship at the Ministry of State Secretariat of the Republic of Indonesia. The system digitalizes protocol officer assignments and council activity monitoring, replacing manual Google Spreadsheet workflows with a centralized platform featuring task management, activity tracking, reporting, and dashboard analytics.',
+          tech: 'Laravel, PHP, MySQL, Tailwind CSS, Chart.js',
+          github: 'null',
+          demo: 'null'
+        },
+        {
+          id: 3,
+          name: 'IoT-Based Smart Parking & Safety Monitoring System',
+          imageUrl: 'iotweb',
+          status: 'Designed and developed an IoT-based Smart Parking & Safety Monitoring System utilizing ESP32 microcontrollers, RFID authentication, HC-SR04 ultrasonic sensors, flame detection sensors, servo motor automation, and buzzer alerts. Developed a Laravel-based web dashboard for real-time monitoring of parking occupancy, vehicle access control, and fire detection status. The project demonstrates expertise in embedded systems, firmware development, sensor integration, and full-stack IoT solution implementation. ',
+          tech: 'Laravel, C++ (Arduino), ESP32, Arduino IDE, REST API, MySQL',
+          github: 'null',
+          demo: 'null'
+        },
+        {
+          id: 4,
+          name: 'Hotel APP',
+          imageUrl: 'hotel',
+          status: 'A mobile solution revolutionizing hotel management and guest experiences. Enables seamless room booking, digital check-in, facility exploration, and service requests—all from a single intuitive interface designed for modern travelers and hospitality businesses',
+          tech: 'Flutter',
+          github: 'null',
+          demo: 'null'
+        },
+        {
           id: 1,
           name: 'Perpustakaan Website',
           imageUrl:'Perpustakaan',
@@ -21,24 +48,6 @@
           demo: 'null'
         },
         {
-          id: 3,
-          name: 'IoT Website',
-          imageUrl: 'iotweb',
-          status: 'This integrated solution combines RFID-based parking access control, real-time fire detection sensors, and a live dashboard website for seamless monitoring. ',
-          tech: 'Laravel',
-          github: 'null',
-          demo: 'null'
-        },
-        {
-          id: 4,
-          name: 'Hotel APP',
-          imageUrl: 'hotel',
-          status: 'A mobile solution revolutionizing hotel management and guest experiences. Enables seamless room booking, digital check-in, facility exploration, and service requests—all from a single intuitive interface designed for modern travelers and hospitality businesses',
-          tech: 'Flutter',
-          github: 'null',
-          demo: 'null'
-        },
-        {
           id: 5,
           name: 'Laundry Fin',
           imageUrl: 'laundryfin',
@@ -47,22 +56,14 @@
           github: 'null',
           demo: 'null'
         },
-        {
-          id: 6,
-          name: 'SIAP-PRO',
-          imageUrl: 'siappro',
-          status: 'SIAP-PRO (Sistem Informasi Acara dan Persidangan Protokol) is a web-based platform developed during my internship at the Ministry of State Secretariat of the Republic of Indonesia. The system digitalizes protocol officer assignments and council activity monitoring, replacing manual Google Spreadsheet workflows with a centralized platform featuring task management, activity tracking, reporting, and dashboard analytics.',
-          tech: 'Laravel, PHP, MySQL, Tailwind CSS, Chart.js',
-          github: 'null',
-          demo: 'null'
-        }
+        
       ]
     };
   }
 }
 </script>
 <template>
-  <div class="px-5 py-5 md:px-12 md:py-10 text-left mx-3 text-gray-900 dark:text-amber-50">
+  <div class="px-5 py-7 md:px-12 md:py-10 text-left mx-3 text-gray-900 dark:text-amber-50">
     <article data-page="about">
       <header>
         <div

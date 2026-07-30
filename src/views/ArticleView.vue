@@ -1,27 +1,46 @@
 <template>
-    <div class="w-full md:w-3/5 mx-auto md:mt-5">
+    <div class="w-full md:w-3/5 mx-auto mt-3 md:mt-5">
         <div class="bg-white dark:bg-[#1e1e1f] rounded-xl mx-3 p-5 md:p-10 md:mx-0 text-gray-900 dark:text-white">
             <div>
                 <template v-if="selectedCertification">
                     <h1 class="text-xl md:text-4xl text-gray-900 dark:text-white text-left font-bold leading-relaxed">{{ selectedCertification.title }}</h1>
                     <div class="mt-3 text-left text-gray-800 dark:text-amber-200 text-sm">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
                     <div class="h-[2px] w-20 my-5 md:my-10 bg-[#ffdb70] md:w-1/3 aos-init aos-animate mr-2"></div>
-                    <div>
-                        <div class="relative w-full image-container flex justify-center items-center">
-                            <img :src="selectedCertification.image" class="rounded-lg max-h-[65vh] w-auto object-contain shadow-xl hover:scale-[1.02] transition-transform duration-300"
-                                :alt="selectedCertification.title + ' Certificate'">
+                    <!-- Modern Document Preview Component -->
+                    <div class="mt-6 border border-gray-200 dark:border-[#383838] rounded-xl overflow-hidden shadow-2xl bg-gray-900/5 dark:bg-[#121212]">
+                        <!-- Toolbar / Header -->
+                        <div class="bg-gray-100 dark:bg-[#18181b] border-b border-gray-200 dark:border-[#27272a] px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm">
+                            <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+                                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                                <span>Document Preview</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded bg-gray-200 dark:bg-[#27272a] text-gray-700 dark:text-gray-300 font-mono text-xs">1 / {{ selectedCertification.pages || 1 }}</span>
+                                <a v-if="!isPdf(selectedCertification.pdfUrl || selectedCertification.image)" :href="selectedCertification.pdfUrl || selectedCertification.image" target="_blank" download class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 rounded-lg transition-colors font-medium border border-amber-500/20">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                    </svg>
+                                    <span>Download</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Document Canvas Area (100% FLUSH / MEPET - ZERO PADDING / NO GAP!) -->
+                        <div class="w-full bg-white dark:bg-[#0d0d0e] overflow-y-auto max-h-[75vh] md:max-h-none" style="-webkit-overflow-scrolling: touch;">
+                            <template v-if="isPdf(selectedCertification.pdfUrl || selectedCertification.image)">
+                                <iframe :src="(selectedCertification.pdfUrl || selectedCertification.image) + '#pagemode=thumbs&view=FitH'" class="w-full h-[75vh] block" style="border: none; overflow-y: auto; -webkit-overflow-scrolling: touch;" scrolling="yes"></iframe>
+                            </template>
+                            <template v-else>
+                                <div class="w-full p-4 flex justify-center items-center">
+                                    <img :src="selectedCertification.image" class="rounded max-h-[70vh] w-auto object-contain mx-auto"
+                                        :alt="selectedCertification.title + ' Certificate Document'">
+                                </div>
+                            </template>
                         </div>
                     </div>
-                    <div class="text-left text-gray-900 dark:text-white mt-8" v-html="selectedCertification.content">
-                        </div>
-
-                    <div v-if="selectedCertification.pdfUrl" class="mt-8 text-center">
-                        <a :href="selectedCertification.pdfUrl" target="_blank" download class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                            Unduh Sertifikat (PDF)
-                        </a>
-                    </div>
-                    <div v-if="selectedCertification.pdfUrl" class="mt-8">
-                         <iframe :src="selectedCertification.pdfUrl" width="100%" height="600px" style="border: none;"></iframe>
+                    <div class="text-left text-gray-900 dark:text-white mt-8 leading-relaxed" v-html="selectedCertification.content">
                     </div>
                 </template>
                 <template v-else>
@@ -59,7 +78,7 @@ import aiCertFull from '@/assets/images/ai.png'; // sertifikat ai
 import nextCertFull from '@/assets/images/next.png'; // sertifikat next
 import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
 import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
-import bnspCertFull from '@/assets/images/bnsp.png'; // sertifikat bnsp
+import bnspCertFull from '@/assets/images/bnsp-iot.pdf'; // sertifikat bnsp
 
 export default {
     data() {
@@ -347,6 +366,7 @@ export default {
                     slug: 'bnsp-certificate',
                     title: 'Badan Nasional Sertifikasi Profesi (BNSP)',
                     date: '12 January, 2026',
+                    pages: 2,
                     content: `
                         <p>Certified in IoT system development, sensor integration, embedded systems, and implementation of connected technology solutions.</p>
                     `,
@@ -360,6 +380,10 @@ export default {
         this.getCertificationDetails();
     },
     methods: {
+        isPdf(fileUrl) {
+            if (!fileUrl) return false;
+            return typeof fileUrl === 'string' && (fileUrl.toLowerCase().includes('.pdf') || fileUrl.toLowerCase().endsWith('.pdf'));
+        },
         getCertificationDetails() {
             const slug = this.$route.params.slug;
             const id = this.$route.params.id;
