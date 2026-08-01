@@ -30,7 +30,16 @@
                         <!-- Document Canvas Area (100% FLUSH / MEPET - ZERO PADDING / NO GAP!) -->
                         <div class="w-full bg-white dark:bg-[#0d0d0e] overflow-y-auto max-h-[75vh] md:max-h-none" style="-webkit-overflow-scrolling: touch;">
                             <template v-if="isPdf(selectedCertification.pdfUrl || selectedCertification.image)">
-                                <iframe :src="(selectedCertification.pdfUrl || selectedCertification.image) + '#pagemode=thumbs&view=FitH'" class="w-full h-[75vh] block" style="border: none; overflow-y: auto; -webkit-overflow-scrolling: touch;" scrolling="yes"></iframe>
+                                <!-- Tampilan Desktop: Menggunakan iframe persis seperti sebelumnya (#pagemode=thumbs&view=FitH) -->
+                                <iframe :src="(selectedCertification.pdfUrl || selectedCertification.image) + '#pagemode=thumbs&view=FitH'" class="hidden md:block w-full h-[75vh]" style="border: none; overflow-y: auto; -webkit-overflow-scrolling: touch;" scrolling="yes"></iframe>
+                                <!-- Tampilan Mobile: Menggunakan vue-pdf-embed agar responsif di HP (tidak besar/terpotong) -->
+                                <div class="block md:hidden w-full bg-gray-50 dark:bg-[#0d0d0e] p-2">
+                                    <vue-pdf-embed
+                                        :source="selectedCertification.pdfUrl || selectedCertification.image"
+                                        class="w-full shadow-lg rounded-lg overflow-hidden bg-white dark:bg-[#18181b]"
+                                        @loaded="onPdfLoaded"
+                                    />
+                                </div>
                             </template>
                             <template v-else>
                                 <div class="w-full p-4 flex justify-center items-center">
@@ -53,6 +62,7 @@
 
 <script>
 import { useRoute } from 'vue-router';
+import VuePdfEmbed from 'vue-pdf-embed';
 
 import iotCertFull from '@/assets/images/iot.png'; // sertifikat iot
 import iotesp32CertFull from '@/assets/images/iotesp32.png'; // sertifikat iotesp32
@@ -81,10 +91,14 @@ import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
 import bnspCertFull from '@/assets/images/bnsp-iot.pdf'; // sertifikat bnsp
 
 export default {
+    components: {
+        VuePdfEmbed
+    },
     data() {
         return {
             route: useRoute(),
             selectedCertification: null, // Ini akan menampung data sertifikat yang ditemukan
+            pdfPageCount: null,
             
             // INI ADALAH DATA LENGKAP SEMUA SERTIFIKAT ANDA
             // Pastikan formatnya adalah ARRAY of OBJECTS []
@@ -380,11 +394,15 @@ export default {
         this.getCertificationDetails();
     },
     methods: {
+        onPdfLoaded(pdf) {
+            this.pdfPageCount = pdf.numPages || (this.selectedCertification && this.selectedCertification.pages) || 1;
+        },
         isPdf(fileUrl) {
             if (!fileUrl) return false;
             return typeof fileUrl === 'string' && (fileUrl.toLowerCase().includes('.pdf') || fileUrl.toLowerCase().endsWith('.pdf'));
         },
         getCertificationDetails() {
+            this.pdfPageCount = null;
             const slug = this.$route.params.slug;
             const id = this.$route.params.id;
 
@@ -405,6 +423,20 @@ export default {
 </script>
 
 <style scoped>
+:deep(.vue-pdf-embed canvas) {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+:deep(.vue-pdf-embed canvas:last-child) {
+    margin-bottom: 0;
+}
+
 /* Gaya CSS yang sudah ada atau modifikasi yang Anda inginkan */
 /* Perbaikan padding-top: 50% mungkin membuat gambar terpotong.
    Untuk menampilkan gambar secara penuh, pertimbangkan untuk menghilangkan padding-top

@@ -316,7 +316,7 @@ export default {
           id: 2,
           title: 'PT CMLABS DIGITAL INDONESIA',
           company: 'IT Project Manager & Frontend Dev',
-          period: 'Malang (Remote) | August 2025 - January 2026',
+          period: 'Remote | August 2025 - January 2026',
           images: [
             '/img/cmlabs.JPEG',
             '/img/cv.jpg',
