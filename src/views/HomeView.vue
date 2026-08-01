@@ -13,19 +13,34 @@
       </div>
       <p class="text-gray-700 dark:text-white pr-4 fade-in-from-left">Welcome to My personal website. <span class="wave">👋🏼</span></p>
       <br>
-      <button
-        @click="downloadCV"
-        class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-gray-900 dark:text-amber-200 border-amber-400 dark:border-amber-200 bg-amber-400 dark:bg-transparent hover:bg-amber-500 dark:hover:bg-amber-200 dark:hover:bg-opacity-10 focus:outline-none w-fit">
-        <svg
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
-          <path fill-rule="evenodd"
-            d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
-            clip-rule="evenodd"></path>
-          <path
-            d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z">
-          </path>
-        </svg>Download CV
-      </button>
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 mt-2 fadein-bot fade-500">
+        <!-- Download CV Button -->
+        <button
+          @click="downloadCV"
+          class="flex items-center py-2.5 px-5 text-sm font-medium rounded-xl border transition-all duration-300 text-gray-950 dark:text-[#ffdb70] border-[#ffdb70] dark:border-[#ffdb70] bg-[#ffdb70] dark:bg-transparent hover:bg-[#ffcb47] dark:hover:bg-[#ffdb70]/10 focus:outline-none shadow-lg hover:shadow-[#ffdb70]/20 active:scale-95">
+          <svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
+              clip-rule="evenodd"></path>
+            <path
+              d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z">
+            </path>
+          </svg>Download CV
+        </button>
+
+        <!-- Contact Me Button (Mailto Femas Alfaridzi with professional template) -->
+        <a
+          href="mailto:femasalfaridzi17@gmail.com?subject=Hello%20Femas%20-%20Portfolio%20Inquiry&body=Hi%20Femas%20Alfaridzi%2C%0A%0AI%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20connect%20with%20you.%0A%0A-%20Name%3A%20%0A-%20Purpose%3A%20%0A%0ABest%20regards%2C"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center py-2.5 px-5 text-sm font-semibold rounded-xl border transition-all duration-300 text-gray-950 dark:text-gray-950 border-[#ffdb70] bg-[#ffdb70] hover:bg-[#ffcb47] dark:bg-[#ffdb70] dark:hover:bg-[#ffcb47] focus:outline-none shadow-lg shadow-[#ffdb70]/20 hover:shadow-[#ffdb70]/30 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>Contact Me
+        </a>
+      </div>
     </div>
     <div class="flex justify-center md:justify-start fadein-right">
         <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"

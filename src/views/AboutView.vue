@@ -13,6 +13,8 @@ import FlutterIcon from "@/assets/flutter.png";
 import MswordIcon from "@/assets/msword.png";
 import CanvaIcon from "@/assets/canva.png";
 import BootstrapsIcon from "@/assets/bootstraps.png";
+import NextJsIcon from "@/assets/nextjs.png";
+import GithubIcon from "@/assets/github.png";
 
 export default {
   data() {
@@ -91,7 +93,7 @@ export default {
         {
           id: 12,
           name: "Next.js",
-          imageUrl: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+          imageUrl: NextJsIcon,
           status: "Junior",
         },
 
@@ -107,7 +109,7 @@ export default {
         {
           id: 2,
           name: "GitHub",
-          imageUrl: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+          imageUrl: GithubIcon,
           status: "Git Hosting",
         },
         {

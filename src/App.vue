@@ -1,7 +1,7 @@
 <template>
   <!-- component -->
   <!-- This is an example component -->
-  <div class="max-w-7xl mx-auto flex flex-col relative">
+  <div class="max-w-7xl mx-auto flex flex-col relative overflow-x-hidden w-full">
 
     <nav class="w-full md:fixed top-0 left-0 right-0 z-[98] backdrop-blur-md bg-gray-50/80 dark:bg-[#121212]/80 border-b border-gray-200 dark:border-gray-800">
       <div class="max-w-7xl mx-auto px-5 py-3 md:py-1 flex flex-wrap items-center justify-between">
@@ -25,6 +25,9 @@
               <router-link to="/projects" class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Projects</router-link>
             </li>
             <li>
+              <router-link to="/experience" class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Experience</router-link>
+            </li>
+            <li>
               <router-link to="/certifications" class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0 blog">Certifications</router-link>
             </li>
           </ul>
@@ -41,6 +44,7 @@
     <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
     <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
   <router-link to="/projects" class="text-gray-300 hover:text-white">Projects</router-link>
+    <router-link to="/experience" class="text-gray-300 hover:text-white">Experience</router-link>
     <router-link to="/certifications" class="text-gray-300 hover:text-white">Certifications</router-link>
   </nav>
 </footer>

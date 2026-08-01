@@ -1,13 +1,13 @@
 <template>
     <div class="w-full md:w-3/5 mx-auto mt-3 md:mt-5">
-        <div class="bg-white dark:bg-[#1e1e1f] rounded-xl mx-3 p-5 md:p-10 md:mx-0 text-gray-900 dark:text-white">
+        <div class="bg-white dark:bg-[#1e1e1f] rounded-xl mx-3 p-5 md:p-10 md:mx-0 text-gray-900 dark:text-white fade-zoom-up">
             <div>
                 <template v-if="selectedCertification">
-                    <h1 class="text-xl md:text-4xl text-gray-900 dark:text-white text-left font-bold leading-relaxed">{{ selectedCertification.title }}</h1>
-                    <div class="mt-3 text-left text-gray-800 dark:text-amber-200 text-sm">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
-                    <div class="h-[2px] w-20 my-5 md:my-10 bg-[#ffdb70] md:w-1/3 aos-init aos-animate mr-2"></div>
+                    <h1 class="text-xl md:text-4xl text-gray-900 dark:text-white text-left font-bold leading-relaxed fadein-up">{{ selectedCertification.title }}</h1>
+                    <div class="mt-3 text-left text-gray-800 dark:text-amber-200 text-sm fadein-up fadein-1">The certificate was Published on <span>{{ selectedCertification.date }}</span></div>
+                    <div class="h-[2px] w-20 my-5 md:my-10 bg-[#ffdb70] md:w-1/3 aos-init aos-animate mr-2 fadein-up fadein-2"></div>
                     <!-- Modern Document Preview Component -->
-                    <div class="mt-6 border border-gray-200 dark:border-[#383838] rounded-xl overflow-hidden shadow-2xl bg-gray-900/5 dark:bg-[#121212]">
+                    <div class="mt-6 border border-gray-200 dark:border-[#383838] rounded-xl overflow-hidden shadow-2xl bg-gray-900/5 dark:bg-[#121212] fadein-up fadein-3">
                         <!-- Toolbar / Header -->
                         <div class="bg-gray-100 dark:bg-[#18181b] border-b border-gray-200 dark:border-[#27272a] px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm">
                             <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
@@ -40,7 +40,7 @@
                             </template>
                         </div>
                     </div>
-                    <div class="text-left text-gray-900 dark:text-white mt-8 leading-relaxed" v-html="selectedCertification.content">
+                    <div class="text-left text-gray-900 dark:text-white mt-8 leading-relaxed fadein-up fadein-4" v-html="selectedCertification.content">
                     </div>
                 </template>
                 <template v-else>
@@ -425,5 +425,52 @@ export default {
     max-width: 100%;
     max-height: 65vh;
     object-fit: contain; /* Penting agar gambar tidak terpotong */
+}
+
+@keyframes fadeZoomUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.96) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.fade-zoom-up {
+    animation: fadeZoomUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadein-up {
+    opacity: 0;
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fadein-1 {
+    animation-delay: 150ms;
+}
+
+.fadein-2 {
+    animation-delay: 300ms;
+}
+
+.fadein-3 {
+    animation-delay: 450ms;
+}
+
+.fadein-4 {
+    animation-delay: 600ms;
 }
 </style>
