@@ -378,7 +378,7 @@ export default {
                 {
                     id: 25,
                     slug: 'bnsp-certificate',
-                    title: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+                    title: 'Badan Nasional Sertifikasi Profesi (BNSP) - IoT Device Engineer',
                     date: '12 January, 2026',
                     pages: 2,
                     content: `

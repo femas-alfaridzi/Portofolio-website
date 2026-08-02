@@ -65,7 +65,7 @@ export default {
         {
           id: 25,
           slug: 'bnsp-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
-          title: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+          title: 'IoT Device Engineer - Badan Nasional Sertifikasi Profesi',
           desc: 'Completed BNSP Internet of Things (IoT) Engineer from Badan Nasional Sertifikasi Profesi (BNSP)', // Deskripsi singkat
           date: '12 January, 2026',
           thumbnail: bnspCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
