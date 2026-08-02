@@ -1,5 +1,5 @@
 <script>
-import profilePicture from "@/assets/araya.jpg";
+import profilePicture from "@/assets/pc2.jpeg";
 import CppIcon from "@/assets/c-.png";
 import PythonIcon from "@/assets/python.png";
 import JavaIcon from "@/assets/java.png";
