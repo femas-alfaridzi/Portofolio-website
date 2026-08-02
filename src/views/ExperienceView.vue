@@ -321,7 +321,6 @@ export default {
             '/img/cmlabs.JPEG',
             '/img/cv.jpg',
             '/img/labs.jpg',
-            '/img/web.png',
             '/img/web2.png',
             '/img/web3.png'
           ],
