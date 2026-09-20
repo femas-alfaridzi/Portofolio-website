@@ -56,12 +56,21 @@ import nextCertThumbnail from '@/assets/images/next.png';
 import dcCertThumbnail from '@/assets/images/dc.png';
 import ictCertThumbnail from '@/assets/images/ict.png';
 import bnspCertThumbnail from '@/assets/images/bnsp.png';
+import eyCertThumbnail from '@/assets/images/ey.png';
 
 export default {
   data() {
     return {
       // Data sertifikat yang statis dan lokal
       certifications: [
+        {
+          id: 26,
+          slug: 'ey-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'EY Technology Risk - EY (Ernst & Young)',
+          desc: 'Completed EY Technology Risk course from EY (Ernst & Young)', // Deskripsi singkat
+          date: '11 September, 2026',
+          thumbnail: eyCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
         {
           id: 25,
           slug: 'bnsp-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue

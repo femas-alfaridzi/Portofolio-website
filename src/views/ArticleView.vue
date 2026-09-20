@@ -89,6 +89,7 @@ import nextCertFull from '@/assets/images/next.png'; // sertifikat next
 import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
 import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
 import bnspCertFull from '@/assets/images/bnsp-iot.pdf'; // sertifikat bnsp
+import eyCertFull from '@/assets/images/ey.png'; // sertifikat ey
 
 export default {
     components: {
@@ -385,6 +386,18 @@ export default {
                         <p>Certified in IoT system development, sensor integration, embedded systems, and implementation of connected technology solutions.</p>
                     `,
                     image: bnspCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null // Sertifikat PDF
+                },
+                {
+                    id: 26,
+                    slug: 'ey-certificate',
+                    title: 'EY Technology Risk - EY (Ernst & Young)',
+                    date: '11 September, 2026',
+                    pages: 2,
+                    content: `
+                        <p>Certified in IoT system development, sensor integration, embedded systems, and implementation of connected technology solutions.</p>
+                    `,
+                    image: eyCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null // Sertifikat PDF
                 },
             ]
