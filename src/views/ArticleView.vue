@@ -90,6 +90,9 @@ import dcCertFull from '@/assets/images/dc.png'; // sertifikat dc
 import ictCertFull from '@/assets/images/ict.png'; // sertifikat ict
 import bnspCertFull from '@/assets/images/bnsp-iot.pdf'; // sertifikat bnsp
 import eyCertFull from '@/assets/images/ey.png'; // sertifikat ey
+import deloitteCertFull from '@/assets/images/deloitte.png';
+import citiCertFull from '@/assets/images/citi.png';   // sertifikat deloitte
+import hpeCertFull from '@/assets/images/hpe.png';   // sertifikat hpe
 
 export default {
     components: {
@@ -393,11 +396,45 @@ export default {
                     slug: 'ey-certificate',
                     title: 'EY Technology Risk - EY (Ernst & Young)',
                     date: '11 September, 2026',
-                    pages: 2,
                     content: `
-                        <p>Certified in IoT system development, sensor integration, embedded systems, and implementation of connected technology solutions.</p>
+                        <p>Developed foundational skills in enterprise technology risk assessment, IT governance, and communicating technical impacts to business stakeholders. </p>
                     `,
                     image: eyCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null // Sertifikat PDF
+                },
+                {
+                    id: 27,
+                    slug: 'deloitte-certificate',
+                    title: 'Technology',
+                    date: '12 September, 2026',
+                    content: `
+                        <p>Validated core software development practices, coding logic, and enterprise-level application lifecycle understanding.</p>
+                    `,
+                    image: deloitteCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null // Sertifikat PDF
+                },
+                {
+                    id: 28,
+                    slug: 'citi-certificate',
+                    title: 'Citi Technology',
+                    date: '14 September, 2026',
+                    content: `
+                        <p>Demonstrated system analysis capabilities through process mapping (UML/State Diagrams) and developing real-time data visualization tools using Java.</p>
+                    `,
+                    image: citiCertFull, // Gambar full size untuk sertifikat ini
+                    pdfUrl: null // Sertifikat PDF
+                },
+                {
+                    id: 29,
+                    slug: 'hpe-certificate',
+                    title: 'Software Engineer',
+                    date: '20 September, 2026',
+                    content: `
+                        <p>Applied enterprise software engineering principles to architect, build, and test robust web
+                        services. Focused on secure data processing and automated testing to validate backend
+                        performance.</p>
+                    `,
+                    image: hpeCertFull, // Gambar full size untuk sertifikat ini
                     pdfUrl: null // Sertifikat PDF
                 },
             ]

@@ -194,17 +194,17 @@ export default {
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
             &nbsp; &nbsp; &nbsp; Hi everyone! My name is Femas Alfaridzi.
-            Fresh Graduate in Information Technology from the Vocational Faculty of Brawijaya University with
-            Cum Laude honors (GPA 3.90/4.00). Possesses a strong interest in Internet of Things (IoT), system
-            analysis, and digital transformation, supported by academic projects, international programs, and
-            professional internship experience.
+            Fresh Graduate in Information Technology from Brawijaya University with
+             Cum Laude honors (GPA 3.90/4.00). As a results-driven IT professional,
+             I specialize in system analysis, software development, 
+             and IT project management to streamline business workflows and optimize system performance.
           </p>
           <p class="mb-3 fadein-left fadeins-2">
-            &nbsp; &nbsp; &nbsp; Experienced in gathering business requirements, analyzing
-            operational processes, coordinating development activities, and delivering technology solutions
-            using Next.js, Laravel, and Figma. Certified in IoT competency by BNSP and equipped with strong
-            analytical, communication, and project coordination skills. Committed to leveraging technology to
-            improve business efficiency, support digital transformation initiatives, and create impactful solutions.
+            &nbsp; &nbsp; &nbsp; EExperienced in bridging business requirements with technical execution, 
+            I have a proven track record of delivering scalable technology solutions. 
+            Supported by practical internship experiences in digitizing manual processes and managing IT projects,
+            I am equipped with strong analytical, communication, and problem-solving skills.
+            I am committed to leveraging my comprehensive IT capabilities to drive digital transformation and support operational excellence.
           </p>
         </div>
       </section>

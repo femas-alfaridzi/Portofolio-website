@@ -6,7 +6,7 @@
       <h1 class="text-4xl font-bold md:text-5xl text-gray-900 dark:text-white fadein-up accent-text">FEMAS ALFARIDZI</h1>
       <div class="py-2">
         <h1
-          class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-amber-500 dark:from-slate-100 dark:to-yellow-500 md:text-2xl fadein-up"
+          class="typewrite min-w-[18rem] md:min-w-[28rem] text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-amber-500 dark:from-slate-100 dark:to-yellow-500 md:text-2xl fadein-up"
           ref="typewriter">
           <span class="wrap">{{ txt }}</span>
         </h1>
@@ -56,7 +56,8 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      toRotate: ["IoT Engineer", "Software Engineer"],
+      toRotate: ["Software Engineer", "Information Technology Specialist", 
+      "System Analyst", "Enterprise Application Development"],
       period: 2000,
       txt: '',
       loopNum: 0,

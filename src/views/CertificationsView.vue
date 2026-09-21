@@ -57,6 +57,9 @@ import dcCertThumbnail from '@/assets/images/dc.png';
 import ictCertThumbnail from '@/assets/images/ict.png';
 import bnspCertThumbnail from '@/assets/images/bnsp.png';
 import eyCertThumbnail from '@/assets/images/ey.png';
+import deloitteCertThumbnail from '@/assets/images/deloitte.png';
+import citiCertThumbnail from '@/assets/images/citi.png';
+import hpeCertThumbnail from '@/assets/images/hpe.png';
 
 export default {
   data() {
@@ -64,9 +67,33 @@ export default {
       // Data sertifikat yang statis dan lokal
       certifications: [
         {
+          id: 29,
+          slug: 'hpe-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Software Engineer',
+          desc: 'Completed HPE Technology course from HPE (Hewlett Packard Enterprise)', // Deskripsi singkat
+          date: '20 September, 2026',
+          thumbnail: hpeCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+        {
+          id: 28,
+          slug: 'citi-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Citi Technology',
+          desc: 'Completed Citi Technology course from Citi (Citi Group)', // Deskripsi singkat
+          date: '14 September, 2026',
+          thumbnail: citiCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },  
+      {
+          id: 27,
+          slug: 'deloitte-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
+          title: 'Technology',
+          desc: 'Completed Deloitte Technology course from Deloitte', // Deskripsi singkat
+          date: '12 September, 2026',
+          thumbnail: deloitteCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
+        },
+      {
           id: 26,
           slug: 'ey-certificate', // PASTIKAN SLUG INI SAMA DENGAN SLUG DI ArticleView.vue
-          title: 'EY Technology Risk - EY (Ernst & Young)',
+          title: 'Technology Risk',
           desc: 'Completed EY Technology Risk course from EY (Ernst & Young)', // Deskripsi singkat
           date: '11 September, 2026',
           thumbnail: eyCertThumbnail // Menggunakan variabel gambar thumbnail yang diimpor
